@@ -69,6 +69,9 @@ If there are files that VS Code doesn't need (like Glitch files), delete those.
 ### GLOBAL MAIN
 `git config --global init.defaultBranch main`
 
+### Make git use vs code instead of vim text editor:​
+`git config --global core.editor "code --wait"`
+
 ### PUSH TO GITHUB REGULARLY
 1. `git add .`
 2.` git commit -m "the changes I made"`
@@ -110,4 +113,7 @@ rm -rf .git
 1. Switch to the target branch (main): `git switch [branchName]`
 2. Merge the other branch (myBranch): `git merge myBranch`.
 
-
+### REBASE TO CORRECT CONFLICTS
+`git rebase myBranch`
+`git push`
+`git push --force`
