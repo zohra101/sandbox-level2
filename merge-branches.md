@@ -37,20 +37,24 @@
 36.  `git commit -m "added heading"`
 37.  `git switch main`
 38.  Add `<h2>About Page</h2> to about.html
-39.  Save the changes CTRL +S
+39.  Save the changes CTRL +S.
 40.  `git add .`
 41.  `git commit -m "added heading"`
 42.  `git merge myBranch`
-43.  Select a resolution at the top of the screen 
-44.  Save changes
+43.  Select a resolution at the top of the screen.
+44.  Save the changes CTRL +S.
 45. `git add .`
 46. `git commit -m "merged conflicting headings"`
 47. `git push`
 
 ### REBASE TO CORRECT CONFLICTS
-`git rebase branch1`
-`git push` 
-`git push --force*`
+48. `git rebase branch1`
+49. Select a resolution at the top of the screen.
+50. Save the changes CTRL +S.
+51. `git add .`
+52. `git rebase --continue`
+53. `git push` 
+54. `git push --force*`
    
 ### RESTORE A SAVE POINT
 1. Select a commit to restore.
