@@ -1,21 +1,31 @@
 ### MERGE TEST
+
+#### INITIALIZE SOURCE CONTROL
 1. `git init`
 2. `touch index.html`
 3. `git add .`
 4. `git commit -m "added files"`
+
+#### PUSH TO A NEW REPOSITORY
 5. GITHUB: Create a new repository called merge-test
 6. `git remote add origin https://myRepository`
 7. `git push --set-upstream origin main`
+
+#### CREATE A BRANCH AND ADD TO IT
 8. `git branch myBranch`
-9. `git switch myBranch`
+9.  `git switch myBranch`
 10. add `<p>Hello World!</p>` to the index.html file
 11. Save the changes CTRL + S
 12. `git add .`
 13. `git commit -m "updated file`
+    
+#### MERGE THE BRANCH
 14. `git switch main`
 15. Change the history from `Auto` to `All`
 16.  `git merge myBranch`
 17.  `git push`
+
+#### SET UP FOR REBASE
 18.  `git switch myBranch`
 19.  Add `<p> Amazing World!</p>` to index.html file
 20.  Save the changes CTRL + S
@@ -26,7 +36,9 @@
 25.  `git add .`
 26.  `git commit -m "added a file"`
 27.  `git merge myBranch`
-28.  Approve the merge by closing the merge editor or the VIM editor by typing `:qa` then `enter`
+28.  Approve the merge by closing the merge editor or the VIM editor by typing `:qa` then `enter.
+
+#### REBASE THE COMMITS
 29.  `git rebase myBranch`
 30.  `git push`
 31.  `git switch myBranch`
