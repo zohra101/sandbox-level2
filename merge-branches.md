@@ -57,19 +57,21 @@
 54. `git push --force*`
    
 ### RESTORE A SAVE POINT
-1. Select a commit to restore.
-2. Copy its id.
-3. `git reset --hard id123456789*`
-4. `git push` will result in an error
-5. `git push --force*`
+55. Select a commit to restore.
+56. Copy its id.
+57. `git reset --hard id123456789*`
+58. `git push` will result in an error
+59. `git push --force*`
     
 ### PUSH A BRANCH TO GITHUB
-`git push origin branch1`
+60. `git push origin branch1`
 
 ### DELETE A BRANCH
-`git branch --delete branch1`
-
+62. `git branch --delete branch1`
+63. `git branch -D branch1`
+64. 
 ### RESTORE A BRANCH FROM GITHUB
-`git branch`
-`git branch branch1 origin/branch1`
+65. `git branch`
+66. `git branch branch1 origin/branch1`
+67. `git branch`git branc   
   

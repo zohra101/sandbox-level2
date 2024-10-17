@@ -1,7 +1,6 @@
 # Git Commands
 
 ## Setup
-
 ### INSTALL GIT BASH
 1. Run the command `git --version`.
 2. If there's an error, install Git Bash from https://git-scm.com/.
