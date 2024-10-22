@@ -1,0 +1,21 @@
+a {
+    color: green;
+}
+
+.green {
+    color: green;
+}
+
+p {
+ display: inline;
+}
+
+a { 
+
+    display: block;
+}
+
+img {
+    display: none;
+
+}

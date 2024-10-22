@@ -34,7 +34,7 @@ ARIA for alerts.
 
 ### `aria-type`
 
-### Enable the accessibility tree in developer tools.
+### Enable the accessibility tree in developer tool to display accessible elements and their attributes. 
 1. Load the generic-elements.html file from your sandobx.
 2. In the browser, open the developer tools.
 3. Go to the Elements tab.
@@ -43,8 +43,18 @@ ARIA for alerts.
 6. Refresh page.
 
 ### Senantic elements
-9. dialog
-10. output
+1. Header
+2. Main
+3. Footer
+4. nav bar
+5. list group
+6. alert
+7. <p>
+8. <label>
+9. <article>
+10. <section>
+11. dialog
+12. output
 
 ### Senantic attributes
 1. something
