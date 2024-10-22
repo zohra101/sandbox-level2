@@ -23,18 +23,25 @@
         <main>
             <p>Image maps allow you to create clickable hotspots on images and use them as hyperlinks, by selecting an area of the image and mapping its coordinates, and then adding the href tag to the destination. I thought these fell out of disfavor for accessbility reasons, because it's hard for a user to identify that part of an image is a hotspot.</p><br>
             <ol>
-                <li>Use <b>map</b> and <b>area</b> to define an image map</li>
-                <li><b>map</b> needs the <b>name</b> attribute</li>
-                <li><b>img</b> needs the <b>usemap</b> attribute</li>
-                <li> <b>usemap</b> should start with # and match <b>name</b></li>
-                <li><b>area</b> needs the <b>shape</b> attribute</li>
-                <li><b>shape</b> can be <b>rect</b>, <b>circle</b>, or <b>poly</b></li>
-                <li><b>area</b>  needs the coords attribute</li>
+                <li>Use <code>map</code> and <code>area</code> to define an image map</li>
+                <ul>
+                    <li><code>map</code> needs the <b>name</b> attribute</li>
+                    <li><code>img</code> needs the <b>usemap</b> attribute</li>
+                    <li><code>usemap</code> should start with <b>#</b> and match <b>name</b></li>
+                </ul>
+                <li><code>area</code> needs the <b>shape</b> attribute</li>
+                <ul>
+                    <li><b>shape</b> can be <b>rect</b>, <b>circle</b>, or <b>poly</b></li>
+                    <li><code>area</code>  needs the coords attribute</li>
+                    <li><b>coords</b> can be obtained with Luna Paint or Pix Spy</li>
+                </ul>
                 <li>add <b>href</b> to <b>area</b>  to make it clickable</li>
                 <li>add <b>title</b> to <b>area</b>  for tooltip popups</li>
                 <li>add <b>target="_blank"</b> to <b>area</b> so links open in a new tab</li>
-                <li>add <b>link</b> to <b>image resizer JSDelivr CDN</b></li>
-                <li>Call <b>imageMapResize()</b> to automatically scale image maps</li>
+                <li>add <code>link</code> to <b>image resizer JSDelivr CDN</b></li>
+                <ul>
+                    <li>Call <code>imageMapResize()</code> to automatically scale image maps</li>
+                </ul><br> 
             </ol><br>
               
             <h2 id="circle">All About Circles</h2>
