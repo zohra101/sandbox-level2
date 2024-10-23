@@ -3,19 +3,65 @@ a {
 }
 
 .green {
-    color: green;
+        color: green;
 }
 
 p {
- display: inline;
+    display: inline;
 }
 
 a { 
-
     display: block;
 }
 
 img {
     display: none;
+}
 
+.inline {
+    display: inline;
+}
+
+.block { 
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+.purple-electro {
+    background-image: url("purple-electro.png");
+}
+
+.gradient-basic {
+    background-image: linear-gradient (white, black);
+}
+
+.gradient-multicolor {
+    background-image: linear-gradient (green, blue, white, gray);
+}
+
+.gradient-direction {
+    background-image: linear-gradient (to right, green, white, gray);
+}
+
+.gradient-degrees {
+    background-image: linear-gradient (90deg, green, white, gray);
+}
+
+.width100 {
+    width: 100%;
+}
+
+.height {
+    height: 400px;
+}
+
+.rgba {
+    color: rgb(6, 68, 0, 0.354); 
+ }
+
+ .opacity25 {
+    opacity: 0.25;
 }
