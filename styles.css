@@ -14,9 +14,9 @@ a {
     display: block;
 }
 
-img {
+/* img {
     display: none;
-}
+} */
 
 .inline {
     display: inline;
@@ -35,27 +35,35 @@ img {
 }
 
 .gradient-basic {
-    background-image: linear-gradient (white, black);
+    background-image: linear-gradient(white, black);
 }
 
 .gradient-multicolor {
-    background-image: linear-gradient (green, blue, white, gray);
+    background-image: linear-gradient(green, blue, white, gray);
 }
 
 .gradient-direction {
-    background-image: linear-gradient (to right, green, white, gray);
+    background-image: linear-gradient(to right, green, white, gray);
 }
 
 .gradient-degrees {
-    background-image: linear-gradient (90deg, green, white, gray);
+    background-image: linear-gradient(90deg, green, white, gray);
 }
 
 .width100 {
     width: 100%;
 }
 
+.width75 {
+    width: 75%;
+}
+
+.width50 {
+    width: 50%;
+}
+
 .height {
-    height: 400px;
+    height: 250px;
 }
 
 .rgba {
@@ -65,3 +73,4 @@ img {
  .opacity25 {
     opacity: 0.25;
 }
+
