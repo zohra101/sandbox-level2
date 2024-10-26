@@ -74,3 +74,22 @@ a {
     opacity: 0.25;
 }
 
+.i-green,
+.b-green {
+    color: green;
+}
+
+i, b {
+    color: green;
+ }
+
+ article {
+    color:
+    •green;
+    font-weight: bold;
+    }
+    
+/*.blue-bold {
+    color: blue;
+    font-weight: bold;
+    } */

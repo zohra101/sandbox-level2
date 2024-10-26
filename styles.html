@@ -111,10 +111,6 @@
                 1 alpha is fully visible
             </pre>
 
-
-
-
-
             <pre>
                 Opacity
                 opacity: 0.25;
@@ -124,6 +120,58 @@
             </pre>
             <div class="gradient-basic">
             <img class="opacity25" src="submit-button.png">
+
+
+            <pre>
+                Grouing selector
+                .i-green,
+                .b-green {
+                    color: green;
+                }
+                Separate elements classes, or IDs with commas.
+                The grouping selector applies the style to all of these elements. 
+            </pre>
+            Missing example
+
+
+            <pre>
+                Nesting selector
+                i, b {
+                    color: green;
+                 }
+                 Select the nested elements(s).
+                 Example: &lt;b&gt; is nested in &lt;i&gt;
+            </pre>
+            <i>
+                italic
+                <b>bold green</b>
+                italic
+                <b>bold green</b>
+            </i>
+            <pre>
+                Specificity = order of styling priority
+                1. inline (most specific)
+                2. id
+                3. class
+                4. element (least specific)
+                Styles are applied based on their priority.
+                Styles with lower priority get overwritten.
+                !important overrides them all and goes by load order.
+                The !important that gets loaded last gets applied.
+            </pre>
+            <article>
+                Hello world!
+            </article>
+
+
+            <pre>
+                Box model
+
+            </pre>
+
+            <pre>
+                Padding
+            </pre>
         </main>
         <footer>
             
