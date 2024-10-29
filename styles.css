@@ -93,3 +93,11 @@ i, b {
     color: blue;
     font-weight: bold;
     } */
+
+.border-dashed {
+    border-style: dashed !important;
+     }
+
+.border-dotted {
+    border-style: dotted !important;
+    }

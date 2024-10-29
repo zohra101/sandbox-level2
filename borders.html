@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Borders</title>
+    <style>
+      .border-dashed {
+        border-style: dashed !important;
+      }
+      .border-dotted {
+        border-style: dotted !important;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <header>
+      <h1>Borders</h1>
+      <hr />
+    </header>
+    <main>
+      <h2 class="text-primary">Border Widths</h2>
+      <br />
+      <p class="m-2 border border-secondary">Base border</p>
+      <p class="m-2 border border-1 border-secondary">Top border around text</p>
+      <p class="m-2 border border-2 border-secondary">
+        Right border around text
+      </p>
+      <p class="m-2 border border-3 border-secondary">
+        Bottom border around text
+      </p>
+      <p class="m-2 border border-4 border-secondary">
+        Left border around text
+      </p>
+      <p class="m-2 border border-5 border-secondary">
+        Left border around text
+      </p>
+      <br />
+
+      <h2 class="text-primary">Border Colors with Border Width 2</h2>
+      <br />
+      <p class="m-2 border border-2">Base border</p>
+      <p class="m-2 border border-2 border-primary">Primary</p>
+      <p class="m-2 border border-2 border-secondary">Secondary</p>
+      <p class="m-2 border border-2 border-success">Success</p>
+      <p class="m-2 border border-2 border-danger">Danger</p>
+      <p class="m-2 border border-2 border-warning">Warning</p>
+      <p class="m-2 border border-2 border-info">Info</p>
+      <p class="m-2 border border-2 border-light">Light</p>
+      <p class="m-2 border border-2 border-dark">Dark</p>
+      <p class="m-2 border border-2 border-black">Black</p>
+      <p class="m-2 bg-info border border-2 border-white">White</p>
+      <br />
+
+      <h2 class="text-primary">Border Positions</h2>
+      <br />
+      <p class="m-2 border border-2 border-secondary">
+        Base border around text
+      </p>
+      <p class="m-2 border-top border-2 border-secondary">
+        Top border around text
+      </p>
+      <p class="m-2 border-end border-2 border-secondary">
+        Right (end) border around text
+      </p>
+      <p class="m-2 border-bottom border-2 border-secondary">
+        Bottom border around text
+      </p>
+      <p class="m-2 border-start border-2 border-secondary">
+        Left (start) border around text
+      </p>
+      <br />
+
+      <h2 class="text-primary">Border Radii</h2>
+      <br />
+      <p class="m-1 border border-2 border-danger">Base border</p>
+      <p class="m-1 border border-2 rounded border-danger">Rounded</p>
+      <p class="m-1 border border-2 rounded-pill border-danger">Rounded pill</p>
+      <p class="m-1 border border-2 rounded-circle border-danger">
+        Rounded circle
+      </p>
+      <br />
+
+      <h2 class="text-primary">Borders Custom</h2>
+      <br />
+      <p class="m-1 border border-2 border-dashed">Dashed</p>
+      <p class="m-1 border border-2 border-dotted">Dotted</p>
+      <br />
+
+      <h2 class="text-primary">Button Colors</h2>
+      <br />
+
+      <div class="m-1">
+        <table>
+          <tr>
+            <td>
+              <button type="button" class="btn">Base class</button>
+              <button type="button" class="btn btn-primary">Primary</button>
+              <button type="button" class="btn btn-secondary">Secondary</button>
+              <button type="button" class="btn btn-success">Success</button>
+              <button type="button" class="btn btn-danger">Danger</button>
+              <button type="button" class="btn btn-link">Link</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-2"></td>
+          </tr>
+          <tr>
+            <td class="bg-secondary">
+              <button type="button" class="btn btn-warning">Warning</button>
+              <button type="button" class="btn btn-info">Info</button>
+              <button type="button" class="btn btn-dark">Dark</button>
+              <button type="button" class="btn btn-light">Light</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <br />
+
+      <h2 class="text-primary">Button Outlines</h2>
+      <br />
+      <table>
+        <tr>
+          <td>
+            <button type="button" class="btn">Base class</button>
+            <button type="button" class="btn btn-outline-primary">
+              Primary
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+              Secondary
+            </button>
+            <button type="button" class="btn btn-outline-success">
+              Success
+            </button>
+            <button type="button" class="btn btn-outline-danger">Danger</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="p-2"></td>
+        </tr>
+        <tr>
+          <td class="bg-secondary">
+            <button type="button" class="btn btn-outline-warning">
+              Warning
+            </button>
+            <button type="button" class="btn btn-outline-info">Info</button>
+            <button type="button" class="btn btn-outline-dark">Dark</button>
+            <button type="button" class="btn btn-outline-light">Light</button>
+          </td>
+        </tr>
+      </table>
+      <br />
+
+      <h2 class="text-primary">Button Sizes</h2>
+      <br />
+      <button type="button" class="btn btn-outline-secondary btn-lg">
+        Large
+      </button>
+      <button type="button" class="btn btn-outline-secondary">Default</button>
+      <button type="button" class="btn btn-outline-secondary btn-sm">
+        Small
+      </button>
+
+      <br />
+
+      <h2 class="text-primary">Divisions</h2>
+      <br />
+      <div class="container border border-1 border-success">
+        <div class="row border border-1">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+      </div>
+      <br />
+
+      <h2 id="background" class="text-primary">Gap 0</h2>
+      <div class="container border border-1 border-success">
+        <div class="row border border-1 gap-0">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1 gap-0">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1 gap-0">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+      </div>
+      <br />
+
+      <h2 class="text-primary">Gap 1</h2>
+      <div class="container border border-1 border-success">
+        <div class="row border border-1 gap-1">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1 gap-1">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1 gap-1">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+      </div>
+      <br />
+
+      <h2 class="text-primary">Gap 2</h2>
+      <div class="container border border-1 border-success">
+        <div class="row border border-1 gap-2">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1 gap-2">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1 gap-2">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+      </div>
+      <br />
+
+      <h2 class="text-primary">Gap 3</h2>
+      <div class="container border border-1 border-success">
+        <div class="row border border-1 gap-3">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1 gap-3">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1 gap-3">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+      </div>
+      <br />
+
+      <h2 class="text-primary">Gap 4</h2>
+      <div class="container border border-1 border-success">
+        <div class="row border border-1 gap-4">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1 gap-4">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1 gap-4">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+      </div>
+      <br />
+
+      <h2 class="text-primary">Gap 5</h2>
+      <div class="container border border-1 border-success">
+        <div class="row border border-1 gap-5">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1 gap-5">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+        <div class="row border border-1 gap-5">
+          <div class="col border border-1"></div>
+          <div class="col border border-1">
+            Text within a div. The div tag creates an HTML block element that
+            takes up the whole line.
+          </div>
+          <div class="col border border-1"></div>
+        </div>
+      </div>
+      <br />
+    </main>
+    <hr />
+  </body>
+</html>
