@@ -16,6 +16,62 @@
                     
                 }
             </pre>
+
+            <pre>
+                SASS variables start with $
+                Use colon to store a value
+                Use the variable name to access the value
+
+                Background image variable
+                -------------------------
+                $thumbsUp:url("thumbs-up.png")
+                .bg-image {
+                    background-image: $thumbsUp;
+                }
+                <div class="bg-image width height"></div>
+
+                Horizontal repeat variable
+                --------------------------
+                $horizontalRepeat: space no-repeat;
+                .horizontalRepeat {
+                     background-image: $horizontalRepeat;
+                 }
+                <div class="horizontalRepeat bg-image width height"></div>
+
+                Veritcal repeat variable
+                ------------------------
+                $verticalRepeat: no-repeat repeat;
+                .verticalRepeat {
+                background-repeat: $verticalRepeat;
+                }
+                <div class="verticalRepeat bg-image width height"></div>
+            </pre>
+
+            <pre>
+                Use SASS to remember sizes
+
+                Background size variable
+                ------------------------
+                background-size: 25% 15%;
+                $stretch: 25% 100%
+                .stretch {
+                background-size: $stretch;
+                }
+                <div class="stretch bg-image width height"></div>
+            </pre>
+
+            <pre>
+                Use SASS to remember Color Stop Gradients
+
+                Gradient variable
+                ------------------------
+                $darkGradient: linear-gradient(90deg, gray, black 10% 90%, gray);
+                $lightGradient: linear-gradient(90deg, gray, white 10% 90%, gray);
+                .gradient {
+                background-image: $darkGradient;
+                }
+                <div class="gradient width height"></div>
+            </pre>
         </main>
         <footer></footer>
        
