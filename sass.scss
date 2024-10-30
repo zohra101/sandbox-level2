@@ -7,37 +7,39 @@ p b {
 }
 
 .bg-image {
-    background-image: $thumbsUp;
-  }
-  
-  .horizontalRepeat {
-    background-repeat: $horizontalRepeat;
-  }
-  
-  .verticalRepeat {
-    background-repeat: $verticalRepeat;
-  }
-  
-  .width {
-    width: 100vw;
-  }
-  
-  .height {
-    height: 200px;
-  }
-  
-  .size7 {
-  background-size: 7%; 
-  }
-  
-  .size50 {
-  background-size: 50%; 
-  }
-  
-  .stretch {
-  background-size: 25% 100%;
-  }
-  
-  .gradient {
-  background-image: $darkGradient;
-  }
+  background-image: $thumbsUp;
+}
+
+.horizontalRepeat {
+  background-repeat: $horizontalRepeat;
+}
+
+.verticalRepeat {
+  background-repeat: $verticalRepeat;
+}
+
+.width {
+  width: 100vw;
+}
+
+.height {
+  height: 200px;
+}
+
+.size7 {
+background-size: 7%; 
+}
+
+.size50 {
+background-size: 50%; 
+}
+
+.stretch {
+background-size: 25% 100%;
+}
+
+$darkGradient: linear-gradient(90deg, gray, black 10% 90%, gray);
+$lightGradient: linear-gradient(90deg, gray, white 10% 90%, gray);
+.gradient {
+background-image: $darkGradient;
+}
