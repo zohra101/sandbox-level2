@@ -1,50 +1,91 @@
+//Custom colors
 $darkRed: rgba(120, 0, 0, 1);
 $darkGreen: rgba(2, 53, 2, 1);
-$lightBlue: rgb(0, 0, 255, 1)
+$lightBlue: rgb(0, 0, 255, 1);
 
-h2 { 
-    color: $darkGreen;
+$primaryFont: sans-serif;
+$secondaryFront: fantasy;
+
+// @font-face {
+// font-family: ;
+// src: ; 
+
+// }
+
+main {
+    font-family: sans-serif;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+pre {
+    code {
+        color: $darkRed
+    }
 }
 
 h1 {
     color: green;
+    width: fit-content;
+
+    &:hover {
+        color: $darkRed
+    }
 }
+
+// h1.hover {
+//     color: $darkRed
+// }
 
 p b {
     color: blue;
 }
 
-.bg-image {
-    background-image: $thumbsUp;
-  }
-  
-.horizontalRepeat {
- background-repeat: $horizontalRepeat;
+h2 { 
+    color: $darkGreen;
 }
-  
-.verticalRepeat {
-background-repeat: $verticalRepeat;
+
+h3 {
+    color: $darkRed;
 }
-  
-.width {
-width: 100vw;
+
+h4 {
+    color: $lightBlue;
 }
+
+// .bg-image {
+//     background-image: $thumbsUp;
+//  }
   
-.height {
-height: 200px;
-}
+// .horizontalRepeat {
+//  background-repeat: $horizontalRepeat;
+// }
   
-.size7 {
-background-size: 7%; 
-}
+// .verticalRepeat {
+// background-repeat: $verticalRepeat;
+// }
   
-.size50 {
-background-size: 50%; 
-}
+// .width {
+// width: 100vw;
+// }
   
-.stretch {
-background-size: 25% 100%;
-}
+// .height {
+// height: 200px;
+// }
+  
+// .size7 {
+// background-size: 7%; 
+// }
+  
+// .size50 {
+// background-size: 50%; 
+// }
+  
+// .stretch {
+// background-size: 25% 100%;
+// }
   
 $darkGradient: linear-gradient(90deg, gray, black 10% 90%, gray);
 $lightGradient: linear-gradient(90deg, gray, white 10% 90%, gray);

@@ -9,12 +9,15 @@
         <header></header>
         <main>
             <h1>SASS</h1>
-            <p><b>Syntactically Aswesone Style Sheet</b></p>
+            <p>Syntactically <b>Aswesone</b> Style Sheet</p>
             <pre>
                 SASS <code>nesting</code> syntax
                 pre {
-                    
+                    code {
+                        color:red;
+                    }   
                 }
+                A style can be nested
             </pre>
 
             <pre>
@@ -74,11 +77,64 @@
             <div class="gradient width height"></div>
             
             <pre>
+                RGBA Color variables
+                --------------------
+                $darkRed: rgba(120, 0, 0, 1);
+                $darkGreen: rgba(2, 53, 2, 1);
+                $lightBlue: rgb(0, 0, 255, 1);
+                1. Declare the color variables all in one area. 
+                2. Use them throughout the SASS file.
+                3. These variables are the single source of truth, so changing the value of the variable affects the whole file.
+            </pre>
 
-
-
+            <pre>
+                Single line comments
+                ---------------------------
+                //Custom colors
+                $darkRed: rgba(120, 0, 0, 1);
+                $darkGreen: rgba(2, 53, 2, 1);
+                $lightBlue: rgb(0, 0, 255, 1);
+                Like JavaScript, SASS supports single line comments (unlike CSS).
             </pre>
             
+            <pre>
+                Adjust width to automatically fit content
+                -----------------------------------------
+                <code>width: fit-content</code>
+                Useful on block elements.
+                Block elements will still use a whole line, but the hit box of the block element is reduced.
+                Compare it with <code>display: inline</code>, which lines up the elements. 
+            </pre>
+
+            <pre>
+                Parent syntax
+                ------------------
+                <code>&;hover</code>
+                Unique to SASS, groups styles together as children of other styles. 
+                <code>h1 {
+                    color: green;
+                    width: fit-content;
+                
+                    &:hover {
+                        color: $darkRed
+                    }
+                }</code>
+            </pre>
+
+
+            <pre>
+                Adding fonts
+                ------------------
+                <code>
+                    @font-face: 
+
+                </code>
+                1. Download the font
+                2. If the font is in zip, 
+                3. 
+                4. 
+                5. 
+            </pre>
         </main>
         <footer></footer>
        
