@@ -1,3 +1,10 @@
+$darkRed: rgba(120, 0, 0, 1);
+$darkGreen: rgba(2, 53, 2, 1);
+
+h2 { 
+    color: $darkGreen;
+}
+
 h1 {
     color: green;
 }
@@ -43,3 +50,5 @@ $lightGradient: linear-gradient(90deg, gray, white 10% 90%, gray);
 .gradient {
 background-image: $darkGradient;
 }
+
+
