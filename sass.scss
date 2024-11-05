@@ -20,10 +20,10 @@ p {
 }
 
 @mixin boxShadow {
-    box-shadow: 5px 5px grey;
+    box-shadow: 5px 5px rgb(68, 16, 16);
   }
   @mixin textShadow {
-    text-shadow: 3px 3px rgb(67, 67, 67);
+    text-shadow: 3px 3px rgb(18, 2, 2);
   }
   
   #mixin-example {
