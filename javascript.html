@@ -75,13 +75,57 @@
                         display("Waiting for the greeting...");
                     }
                 </code>
-                Able to run other code while waiting for some code to respond. 
-                Like multitasking.
+                Able to run other code while waiting for some code to respond, like multitasking.
                 Other code runs immediately after <code>setTimeout</code>.
                 The <code>greeting</code> function runs after other code.<br>
                 <button onclick="asynchronous()">Delayed Greeting</button>
             </pre>
-          
+
+            <pre>
+                Server simulation
+                -----------------
+                A server takes time to respond. Use asynchronous code to simulate it. 
+                <code>
+                    unction submitForm(event) {
+                        const inputs = event.target;
+                        const emailInput = inputs[0];
+                        const email = emailInput.value;
+                        display("Submitting for " + email + " ...");
+                        setTimeout(serverResponse, 5000);
+                    }
+                    
+                    function serverResponse() {
+                       display("Form was successfully processed.");
+                    }                    
+                </code>
+                <form onsubmit="submitForm(event)">
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <input type="submit">
+                </form>
+            </pre>
+            
+            <pre>
+                JSON Stringify                
+                --------------
+                JavaScript Object Notation
+                Stringify converts and object to a string. 
+                <code>
+                    function displayObject() {
+                        const myCar = { color: "red", year: 2024 };
+                        const result = JSON.stringify(myCar);
+                        display(result);
+                    }                    
+                </code>
+                Need to store results to display them.
+                This is the syntax we use to represent objects. 
+                {} represent an object.
+                , separates properties.
+                "" sets properties.
+                : sets values.
+                <button onclick="displayObject()">Display Object</button>
+            </pre>
+
     
         </main>
         <footer></footer>
