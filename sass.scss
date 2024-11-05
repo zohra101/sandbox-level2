@@ -55,9 +55,9 @@ h4 {
     color: $lightBlue;
 }
 
-// .bg-image {
-//     background-image: $thumbsUp;
-//  }
+.bg-image {
+    background-image: $thumbsUp;
+ }
   
 // .horizontalRepeat {
 //  background-repeat: $horizontalRepeat;
@@ -87,10 +87,10 @@ h4 {
 // background-size: 25% 100%;
 // }
   
-$darkGradient: linear-gradient(90deg, gray, black 10% 90%, gray);
-$lightGradient: linear-gradient(90deg, gray, white 10% 90%, gray);
-.gradient {
-background-image: $darkGradient;
-}
+// $darkGradient: linear-gradient(90deg, gray, black 10% 90%, gray);
+// $lightGradient: linear-gradient(90deg, gray, white 10% 90%, gray);
+// .gradient {
+// background-image: $darkGradient;
+// }
 
 

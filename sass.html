@@ -9,7 +9,7 @@
         <header></header>
         <main>
             <h1>SASS</h1>
-            <p>Syntactically <b>Aswesone</b> Style Sheet</p>
+            <p>Syntactically <b>Aswesome</b> Style Sheet</p>
             <pre>
                 SASS <code>nesting</code> syntax
                 pre {
@@ -17,22 +17,32 @@
                         color:red;
                     }   
                 }
-                A style can be nested
+                A style can be nested in another style to select a nested element.
+                The code tag in the pre tag is styled.
             </pre>
-
             <pre>
-                SASS variables start with $
-                Use colon to store a value
-                Use the variable name to access the value
+                $myColor: purple;
+                pre{ 
+                     i {
+                    color:$myColor;
+                    }
+                }
+
+                SASS variables start with $.
+                Use colon to store a value.
+                Use the variable name to access the value.
+            </pre>
+            <br>
+            <pre>
+                Use SASS to remember repeats
 
                 Background image variable
                 -------------------------
-                $thumbsUp:url("thumbs-up.png")
+                $thumbsUp:url("thumbs-up.jpg")
                 .bg-image {
                     background-image: $thumbsUp;
                 }
                 <div class="bg-image width height"></div>
-
                 Horizontal repeat variable
                 --------------------------
                 $horizontalRepeat: space no-repeat;
@@ -40,7 +50,6 @@
                      background-image: $horizontalRepeat;
                  }
                 <div class="horizontalRepeat bg-image width height"></div>
-
                 Veritcal repeat variable
                 ------------------------
                 $verticalRepeat: no-repeat repeat;
@@ -49,7 +58,6 @@
                 }
                 <div class="verticalRepeat bg-image width height"></div>
             </pre>
-
             <pre>
                 Use SASS to remember sizes
 
