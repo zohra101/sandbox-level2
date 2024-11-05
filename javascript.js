@@ -1,3 +1,3 @@
 function display(message) {
-    document.write=(message);
+    document.write(message);
 }
