@@ -3,12 +3,85 @@
     <head>
         <title>JavaScript
         </title>
+        <link rel="stylesheet" href="javascript.css">
         <script src="javascript.js"></script>
     </head>
     <body>
-        <header></header>
-        <main>
+        <header>
+            <h1>JavaScript</h1>
+        </header>
+            <main>
+            <h2>JavaScript Review</h2>
            <button onclick="display('Hello World!')">Click Me</button>
+           <br><br>
+           <code>
+            function display(message) {
+            document.write(message);
+            }
+           </code>
+           <h2>Functions</h2>
+
+           <pre>
+                Activator function
+                ------------------
+                <code>
+                    function greeting () {
+                        display("Hello World!");
+                    }
+                </code>
+
+                A function that doesnt have parameters.
+                its only purpose is to call a function with parameters.<br>
+                <button onclick="greeting()">Activate Me</button>
+           </pre>
+            
+           <pre>
+                Callback function
+                ------------------
+                <code>
+                    function myFunction(callbackFunction){
+                        callbackFunction();
+                    }
+                    function activator(){
+                        myFunction(greeting);
+                    }
+                    activator();
+                </code>
+                A function that is passed as a parameter.
+                A function can be passed to another function.
+                The function can run that function.<br>
+                <button onclick="activator()">Activate Me</button>
+            </pre>
+
+            <pre>
+                setTimeout function
+                -------------------
+                <code>
+                    function delayedGreeting() {
+                        setTimeout(greeting, 5000);
+                    }
+                </code>
+                A function that calls a function after a specified time.
+                It accepts a function and a delay time in milliseconds.<br>
+                <button onclick="activator()">Delayed Greeting</button>
+            </pre>
+
+            <pre>
+                Asynchronous function
+                ----------------------
+                <code>
+                    function asynchronous () {
+                        setTimeout(greeting, 5000);
+                        display("Waiting for the greeting...");
+                    }
+                </code>
+                Able to run other code while waiting for some code to respond. 
+                Like multitasking.
+                Other code runs immediately after <code>setTimeout</code>.
+                The <code>greeting</code> function runs after other code.<br>
+                <button onclick="asynchronous()">Delayed Greeting</button>
+            </pre>
+          
     
         </main>
         <footer></footer>
