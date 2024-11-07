@@ -118,7 +118,7 @@
                     }                    
                 </code>
                 Need to store results to display them.
-                This is the syntax we use to represent objects. 
+                This is the syntax we use to represent objects. Servers communicate with stringified objects.
                 {} represent an object.
                 , separates properties.
                 "" sets properties.
@@ -126,7 +126,72 @@
                 <button onclick="displayObject()">Display Object</button>
             </pre>
 
-    
+            <pre>
+                JavaScript class
+                -----------------
+                <code>
+                    class MyCar {
+                        color = "red";
+                        year = 2024;
+                    }
+                </code>
+                A JavaScript class is like a template.It predefines an object without creating it. Usually defined towards the top of a file. 
+                Directly displaying a class shows its code. 
+
+                Syntax:
+                1. Keyword <code>class</code>.
+                2. Class name, usually in PascalCase; like camel case but with a capital letter. 
+                3. Curly braces.
+                4. Assign properties their values; use equal signs and semi-colons.
+
+                Observe: 
+                1. Create a class that defines built-in or default values.
+                2. Create an object with built-in or default values.
+                3. Put a debugger after the class and object.
+                4. Directly display the class and object.
+            </pre>
+
+            <pre>
+                JavaScript class v. object
+                --------------------------
+                <code>
+                    class MyCar {
+                        color = "red";
+                        year = 2024;
+                    }
+                    
+                    const myCar {
+                        color = "red";
+                        year = 2024;
+                    }
+                    
+                    display(MyCar);
+                    display(myCar);  
+                </code>
+                Directly displaying a class shows its code. 
+                In developer tools, a class has a name and length.
+                A JavaScript class is different than a JavaScript object.
+                The syntax of a class is different than an object.
+
+                <button onlick="classVObject()">Class v. Object</button>
+            </pre>
+
+            <pre>
+                Create a new JS oject from a class
+                ----------------------------------
+                <code>
+                    const myCar = new MyCar();
+                </code>
+                Constructs an object from a class. 
+
+                1. Declare an object to store the value into.
+                2. Add keyword <code>new</code>.
+                3. Name of the class with parentheses and semi-colon.
+                4. The value is an ojbect created from the class. 
+
+
+            <button onclick="createObjectFromClass">newObjectFromClass</button>
+            </pre>
         </main>
         <footer></footer>
        

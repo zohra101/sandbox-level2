@@ -2,6 +2,27 @@ function display(message) {
     document.write(message);
 }
 
+function classVObject() {
+    class MyCar {
+        color = "red";
+        year = 2024;
+    }
+    
+    const myCar {
+        color = "red";
+        year = 2024;
+    }
+}
+
+display(MyCar);
+display(myCar);
+
+
+function createObjectFromClass() {
+    const myCar = new MyCar();
+    display(myCar);
+}
+
 function greeting () {
     display("Hello World!");
 }
@@ -41,4 +62,16 @@ function displayObject() {
     const result = JSON.stringify(myCar);
     display(result);
 }
+
+// class MyCar {
+//     color = "red";
+//     year = 2024;
+// }
+
+// const myCar {
+//     color = "red";
+//     year = 2024;
+// }
+
+
 
