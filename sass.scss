@@ -19,6 +19,14 @@ p {
     @include redText;
 }
 
+.boxShadow {
+    box-shadow: 5px 5px rgb(68, 16, 16);
+  }
+  
+.textShadow {
+    text-shadow: 3px 3px rgb(18, 2, 2);
+  }
+
 @mixin boxShadow {
     box-shadow: 5px 5px rgb(68, 16, 16);
   }
@@ -114,6 +122,13 @@ h4 {
 .bg-image {
     background-image: $thumbsUp;
  }
+
+ $myColor: purple;
+ pre{ 
+    i {
+   color:$myColor;
+   }
+}
   
 // .horizontalRepeat {
 //  background-repeat: $horizontalRepeat;

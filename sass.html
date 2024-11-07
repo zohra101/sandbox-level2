@@ -21,6 +21,7 @@
                 The code tag in the pre tag is styled.
             </pre>
             <pre>
+                SASS variable syntax
                 $myColor: purple;
                 pre{ 
                      i {
@@ -132,38 +133,50 @@
                 Adding fonts
                 ------------------
                 <code>
-                    @font-face: 
+                    @font-face {
+                        font-family: ;
+                        src: ; 
+                    }
+                        
 
                 </code>
                 1. Download the font
                 2. If the font is in zip, 
-                3. 
-                4. 
-                5. 
+                3. Configure it with @font-face.
+                4. Name it with font-family.
+                5. Link it with src: url().
             </pre>
 
             <pre>
                 SASS mixins - single line   
+                -------------------------
+                <code>@mixin redText {
+                    color: red;
+                }
+                </code>
 
                 Mixins are like variables
                 A single-line mixin stores a property and value.
                 Type @mixin to declare/define a mixin variable.
                 Type @include to use the mixin.
                 Mixins can substitute for utility classes so elements can be described by their name.
+                <div></div>
+               
+                <p>This is a paragraph</p>
+                <span class="bg-primary p-3" id="mixin-example">Mixin Example</span>
             </pre>
-            <p>This is a paragraph</p>
-            <span class="bg-primary p-3" id="mixin-example">Mixin Example</span>
+           
 
             <pre>
                 SASS mixins - multi-line
-                
+                ------------------------
                 A multi-line mixin stores multiple properties and values.
             </pre>
             <button class="btn btn-success" id="mixin-button">Click!</button>
 
             <pre>
                 SASS mixin - all in one
-              
+                -----------------------
                 The all in one mixin includes animation1 and animation2.
                 Parent syntax is used
                 This mixin can be used in any element to animate it.    
