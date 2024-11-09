@@ -2,20 +2,17 @@ function display(message) {
     document.write(message);
 }
 
-function classVObject() {
-    class MyCar {
-        color = "red";
-        year = 2024;
-    }
+// function classVObject() {
+//         class MyCar {
+//             color = "red";
+//             year = 2024;
+//         }
     
-    const myCar {
-        color = "red";
-        year = 2024;
-    }
-}
+//     const myCar {color = "red", year = 2024}
+// }
 
-display(MyCar);
-display(myCar);
+// display(MyCar);
+// display(myCar);
 
 
 function createObjectFromClass() {
