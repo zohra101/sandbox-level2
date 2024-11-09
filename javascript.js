@@ -27,13 +27,21 @@ function greeting () {
     display("Hello World!");
 }
 
-function myFunction(callbackFunction){
+function myFunction(callbackFunction) {
     callbackFunction();
 }
-function activator(){
+function activator() {
     myFunction(greeting);
 }
 activator();
+
+function activatorTest() {
+    display("Experimenting with an activator function.");
+    }
+
+    function activatorTest(myParameter){
+    display(myParameter);
+    }
 
 function dekayedGreeting () {
     setTimeout(greeting, 300);
@@ -73,5 +81,38 @@ function displayObject() {
 //     year = 2024;
 // }
 
+function newObject() {
+    const myCar = new MyCar();
+    const myCar2 = new MyCar();
+    const myCar3 = new MyCar();
+    display(JSON.strigify (myCar));
+    display(JSON.strigify (myCar2));
+    display(JSON.strigify (myCar3));
+}
+
+function handleSubmit(event) {
 
 
+
+
+
+
+
+}
+
+function getServerResponse(resolve) {
+    setTimeout(activateResolve, 5000)
+    
+    function activateResolve () {
+        const response = {
+            message: "Successfully processed.",
+        };
+       const resolveValue = JSON.stringify(response);
+       resolve(resolveValue);
+    }
+
+}
+
+function parseResponse(resolveValue) {   
+    
+}

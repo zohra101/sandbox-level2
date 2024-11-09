@@ -30,9 +30,35 @@
                     }
                 </code>
 
-                A function that doesnt have parameters.
-                its only purpose is to call a function with parameters.<br>
+                A function that doesn't have parameters. It still runs without error if you set a parameter. 
+                Its only purpose is to call a function with parameters.<br>
                 <button onclick="greeting()">Activate Me</button>
+
+                Send a value to an activator function.
+                Add a parameter to an activator function.
+                            
+                <code>
+                function activatorTest() {
+                display("Experimenting with an activator function.");
+                }
+
+                function activatorTest(myParameter){
+                display(myParameter);
+                }
+                </code>
+
+                <button onclick="activatorTest('Hello World!')">Activator Test</button>
+
+                What do you observe about sending values to activator functions?
+                ----------------------------------------------------------------
+                A value can be sent to functions without parameters.
+                Add a parameter to the function to access the value.
+                View the parameter by looking at the Scope in the debugger. 
+
+                <code>
+
+                </code>
+                
            </pre>
             
            <pre>
@@ -109,7 +135,7 @@
                 JSON Stringify                
                 --------------
                 JavaScript Object Notation
-                Stringify converts and object to a string. 
+                Stringify generates a string from an object.
                 <code>
                     function displayObject() {
                         const myCar = { color: "red", year: 2024 };
@@ -123,7 +149,13 @@
                 , separates properties.
                 "" sets properties.
                 : sets values.
-                <button onclick="displayObject()">Display Object</button>
+                <button onclick="displayObject()">Display Object</button><br>
+                Servers communicate with stringified objects.
+                    Open a chrome browser tab.
+                    Go to https://opentdb.com/api.php?amount=1
+                    View the stringified object.
+
+                    MS Edge auto formats strigified objects.
             </pre>
 
             <pre>
@@ -135,7 +167,8 @@
                         year = 2024;
                     }
                 </code>
-                A JavaScript class is like a template. It predefines an object without creating it. Usually defined towards the top of a file. 
+                A JavaScript class is like a template. It predefines an object without creating it. 
+                Usually defined towards the top of a file. 
                 Directly displaying a class shows its code. 
 
                 Syntax:
@@ -181,17 +214,242 @@
                 ----------------------------------
                 <code>
                     const myCar = new MyCar();
+                    const myCar2 = new MyCar();
+                    const myCar3 = new MyCar();
+            
+                    myCar2.color = "white";
+                    myCar3.year = 2025;
+                            
+                function newObject() {
+                const myCar = new MyCar();
+                const myCar2 = new MyCar();
+                const myCar3 = new MyCar();
+                display(JSON.strigify (myCar));
+                display(JSON.strigify (myCar2));
+                display(JSON.strigify (myCar3));
+            }
                 </code>
-                Constructs an object from a class. 
+                Constructs an object from a class. Creates a predefined object.
+
+                What do you observe about constructing multiple objects from a class?
+                    The objects start with the properties and values defined by the class.
+                    The objects are independent. 
+                    The values of their properties can be changed individually.
 
                 1. Declare an object to store the value into.
                 2. Add keyword <code>new</code>.
                 3. Name of the class with parentheses and semi-colon.
                 4. The value is an ojbect created from the class. 
-
-
-            <button onclick="createObjectFromClass">newObjectFromClass</button>
+            <button onclick="createObjectFromClass">New Object From Class</button>
             </pre>
+
+            <pre>
+                JavaScript promise
+                ------------------
+                <code>
+                    const results = new Promise(myFunction);
+                    const promise = new Promise(myFunction);
+                </code>
+
+
+                A special class that runs a callback function.
+                It's not asynchronous. It immediately runs myFunction.
+                Status shows pending even after myFunction has finished. The status must be manually changed.
+                The callback function must indicate when it's finished. 
+
+                Create a promise:
+                1. Create myFunction that displays something.
+                2. Create the function makePromise
+                3. Add a promise that runs myFunction.
+                4. Display something after the promise.
+                5. Activate makePromise with a button.
+
+                <code>          
+                    function myFunction() {
+                        display("This is my function.")
+                    }
+
+                    function makePromise() {
+                        const promise = new Promise(myFunction);
+                        display("Made a Promise.");
+                    }
+
+                    <button onclick="makePromise()">Make a Promise</button>
+
+                    It's not asynchronous. It immediately runs myFunction
+                    Status shows pending even after my Function has finished.
+                </code>
+            </pre>
+            <pre>
+                Resolve function and resolve value
+                ----------------------------------
+                <code>
+                    function myFunction(resolve) {
+                    resolve();
+                    }
+                </code>
+
+                
+                The value provided by a promise is known as a resolve function.
+                Activating the resolve function changes the status to fulfilled. 
+                The resolve function is a callback function. It is passed to the function that is given to the promise.
+                It indicates that the Promise is fulfilled.
+
+                <code>
+                    function myFunction(resolve) {
+                    setTimeout(serverResponse, 5000);
+                    display("Inside myFunction.")
+                    }
+                </code>
+
+                The resolve function is meant to be used by asynchronous code.
+                The resolve value gets passed to the callback of the then function.
+                Promise shows pending while server is responding
+                Error with the resolve function -- undefined.
+
+                <code>
+                       resolve(); becomes
+                    resolve("The promise is fulfilled.");
+                </code>
+                The resolve value gets passed to the function.
+                The promise supposedly gets fulfilled.
+                A promise value is accessible.
+
+            </pre>
+            <pre>
+                Function in a function (nested function)
+                ----------------------------------------
+                <code>
+                    function outerFunction () {
+                            const message = "Hello world!";
+                            innerFunction();
+                        function innerFunction() {
+                            display(message);
+                        }
+                    }
+                </code>
+                <button onclick="outerFunction()">Nested Function</button>
+                    Functions can be defined in other functions.
+                    The inner function has access to variables in the outer function.
+                    The inner function only runs when it's activated.
+            </pre>
+            <pre>
+                Promise callback function
+                -------------------------
+                <code>
+                    function myFunction(callbackFunction) {
+                    display(callbackFunction);
+                    }
+                </code>
+
+                The Promise passes a value to my Function.
+                1. Let <code>myFunction</code> accept a parameter.
+                2. Display the value.
+
+                The promise sends a callback function to the myFunction. 
+                That callback function to myFunction indicates that the promise is fulfilled.
+                That callback function is known as the resolve function.
+                The resolve function is meant to be used by asynchronous code.
+                The asynchronous code is supposed resolve to indicate when it's done
+            </pre>
+            <pre>
+                Use scopes to give serverResponse access to
+
+            <code>
+                function activatorTest(myParameter) () {
+                    display(myParameter);
+                    }
+    
+                    function outerFunction () {
+                    const message = "Message from?the outer |";
+                    innerFunction();
+                    function innerFunction() {
+                    display (message);
+                         }
+                    }
+    
+            </code>
+             Functions can be defined in other functions. 
+             The inner function has access to variables in the outer function.
+             The inner function only runs when it is activated.
+            </pre>
+
+            <pre>
+                Promise function
+                -----------------
+                <code>
+                    function myFunction(resolve) {
+                        setTimeout(serverResponse2, 5000);
+                        display("Inside my myFunction");
+                                            
+                            function serverResponse2() {
+                            display("Form was successfully processed.");
+                                resolve();
+                            }
+                        }
+                </code>
+                To give serverResponse access to resolve, put serverResponse inside the outer function.    
+                AKA...
+                Use an inner function to give access to the resolve function.
+
+                What do you observe about serverResponse as an inner function?
+                --------------------------------------------------------------
+                It has access to resolved.
+                Promise is pending before the server response.
+                Promise should resolve after the server response.
+                No access to the promise after the server response .
+                </pre>
+
+            <pre>
+                Then function
+                -------------
+                <code>
+                    promise.then(getMessage);
+
+                    function getMessage(resolveValue) {
+                    display(resolveValue);
+                    }
+                </code>
+                Use then to access the promise after the server response.
+                The then function runs the callback function when the promise is resolved (fulfilled).
+                The callback function has access to the resolve value.
+                Create a then function:
+                1. Create the function getMessage.
+                2. Let then call getMessage.
+                3. Add a parameter to getMessage and display it.
+                4. Send a value to resolve ();.
+            </pre>
+
+        
+               
+      
+            <pre>
+                Method
+                ------
+                <code>
+                    promise. then (getMessage);
+                    document.write("Hello world!");
+                </code>
+                A method is a function that's part of an object.
+            </pre>
+            <pre>
+                Handler
+                -------
+                <code>
+                    onsubmit="submitForm(event)"
+                </code>
+                A function that runs in response to an event. The event variable is used. 
+                <code>Onlick</code>can also run a function in response to an event.
+                Example events:
+                1. a form is submitted
+                2. a button is clicked
+                A handler function usually starts with handle: handleSubmit or handleClick.
+            </pre>
+
+            <pre>
+
+            </pre>
+
         </main>
         <footer></footer>
        
