@@ -119,7 +119,7 @@ function getMessage(messageParameter) {
     display(messageParameter);
 }
 
-function serverResponsePromise {
+function serverResponsePromise() {
     const promise = new Promise(serverResolve);
     promise.then(getMessage);
     display("Made a promise.");
@@ -162,14 +162,14 @@ function newObject() {
     display(JSON.strigify (myCar3));
 }
 
-function handleSubmit(event) {
-
-
-
-
-
-
-
+function handleSubmit (event) {
+    event. preventDefault;
+    const inputs = event. target;
+    const emailInput = inputs[0];
+    const email = emailInput.value;
+    display ("Submitting form for " + email +"...");
+    const promise = new Promise (getServerResponse);
+    promise. then (parseResponse);
 }
 
 function getServerResponse(resolve) {
@@ -186,5 +186,26 @@ function getServerResponse(resolve) {
 }
 
 function parseResponse(resolveValue) {   
+    
+}
+
+//
+function makeRequest(url) {
+    const promise = new Promise ();
+
+}
+
+function handleSubmit (event) {
+    event. preventDefault();
+    const inputs = event. target;
+    const emailInput = inputs[0];
+    const email = emailInput.value;
+    display ("Submitting form for " + email +"...");
+    const promise = makeRequest("https://dummyurl.com");
+    promise.then(parseResponse);
+}
+
+function getServerResponse(resolve) {
+    setTimeout( , 5000);
     
 }

@@ -309,7 +309,7 @@
 
                 The resolve function is meant to be used by asynchronous code.
                 The resolve value gets passed to the callback of the then function.
-                Promise shows pending while server is responding
+                Promise shows pending while server is responding.
                 Error with the resolve function -- undefined.
 
                 <code>
@@ -425,6 +425,24 @@
                 </pre>
                 <button onclick="serverResolve()">Get Server Response</button>
             <pre>
+                Promise best practices
+                ----------------------
+                <code>
+                    function handleSubmit (event) {
+                        event. preventDefault;
+                        const inputs = event. target;
+                        const emailInput = inputs[0];
+                        const email = emailInput.value;
+                        display ("Submitting form for " + email +"...");
+                        const promise = new Promise (getServerResponse);
+                        promise. then (parseResponse);
+                    }
+                </code>
+                A promise is usually the return function of a 
+                1. Communication with a server is called a request. Rename the promise function to request. 
+                2. Server communication is established with a URL. Add the url parameter to the function.
+            </pre>
+            <pre>
                 Then function
                 -------------
                 <code>
@@ -443,7 +461,6 @@
                 3. Add a parameter to <code>getMessage</code> and display it.
                 4. Send a value to <code>resolve ();</code>.
             </pre>  
-      
             <pre>
                 Method
                 ------
@@ -452,6 +469,7 @@
                     document.write("Hello world!");
                 </code>
                 A method is a function that's part of an object.
+                Then and write are the methods for the promise and document objects.
             </pre>
             <pre>
                 Handler
@@ -466,10 +484,9 @@
                 2. a button is clicked
                 A handler function usually starts with handle: handleSubmit or handleClick.
             </pre>
-
             <pre>
-                Server response simulation
-                --------------------------
+                Server response simulation with promise
+                ---------------------------------------
                 <code>
                     function serverResolve(resolve) {
                         setTimeout(nestedServerRespons, 5000);
@@ -487,13 +504,18 @@
                     
                     function serverResponsePromise {
                         const promise = new Promise(serverResolve);
-                        promise.then(getMessage);
+                        promise.then(parseResponse);
                         display("Made a promise.");
                     }
                 </code>
+            </pre>
+            <pre>
+                JSON parse
+                -----------
+
 
             </pre>
-
+            
         </main>
         <footer></footer>
        
