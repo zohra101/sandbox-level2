@@ -384,7 +384,7 @@
                     }
                 </code>
                 <button onclick="outerFunction()">Nested Function</button>
-                
+
                     Functions can be defined in other functions. 
                     The inner function has access to variables in the outer function.
                     The inner function only runs when it is activated.
@@ -413,6 +413,7 @@
                             }
                         }
                 </code>
+
                 To give serverResponse access to resolve, put serverResponse inside the outer function.    
                 AKA...Use an inner function to give access to the resolve function.
 
@@ -422,7 +423,7 @@
                 Promise should resolve after the server response.
                 No access to the promise after the server response .
                 </pre>
-
+                <button onclick="serverResolve()">Get Server Response</button>
             <pre>
                 Then function
                 -------------
@@ -437,17 +438,17 @@
                 The then function runs the callback function when the promise is resolved (fulfilled).
                 The callback function has access to the resolve value.
                 Create a then function:
-                1. Create the function getMessage.
-                2. Let then call getMessage.
-                3. Add a parameter to getMessage and display it.
-                4. Send a value to resolve ();.
+                1. Create the function <code>getMessage</code>.
+                2. Let <code>then</code> call <code>getMessage</code>.
+                3. Add a parameter to <code>getMessage</code> and display it.
+                4. Send a value to <code>resolve ();</code>.
             </pre>  
       
             <pre>
                 Method
                 ------
                 <code>
-                    promise. then (getMessage);
+                    promise.then (getMessage);
                     document.write("Hello world!");
                 </code>
                 A method is a function that's part of an object.
@@ -467,6 +468,29 @@
             </pre>
 
             <pre>
+                Server response simulation
+                --------------------------
+                <code>
+                    function serverResolve(resolve) {
+                        setTimeout(nestedServerRespons, 5000);
+                        display("Inside my myFunction");
+                                            
+                            function nestedServerResponse() {
+                            display("Form was successfully processed.");
+                                resolve();
+                            }
+                        }
+                    
+                    function getMessage(messageParameter) {
+                        display(messageParameter);
+                    }
+                    
+                    function serverResponsePromise {
+                        const promise = new Promise(serverResolve);
+                        promise.then(getMessage);
+                        display("Made a promise.");
+                    }
+                </code>
 
             </pre>
 

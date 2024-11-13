@@ -89,7 +89,7 @@ function madePromise() {
     display("Made a promise.")
 }
 
-function serverResponse() {
+function serverResponse2() {
    display("Your information has been processed successfully.");
    resolve();
 }
@@ -105,7 +105,25 @@ function outerFunction () {
 }
 
 //Nested resolve function
+function serverResolve(resolve) {
+    setTimeout(nestedServerRespons, 5000);
+    display("Inside my myFunction");
+                        
+        function nestedServerResponse() {
+        display("Form was successfully processed.");
+            resolve();
+        }
+    }
 
+function getMessage(messageParameter) {
+    display(messageParameter);
+}
+
+function serverResponsePromise {
+    const promise = new Promise(serverResolve);
+    promise.then(getMessage);
+    display("Made a promise.");
+}
 
 //Form processing message
 function submitForm(event) {
