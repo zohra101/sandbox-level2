@@ -3,38 +3,6 @@ function display(message) {
     document.write(message);
 }
 
-
-//Class v. object
-// function classVObject() {
-//         class MyCar {
-//             color = "red";
-//             year = 2024;
-//         }
-    
-//     const myCar {color = "red", year = 2024}
-// }
-
-// display(MyCar);
-// display(myCar);
-
-//Create object fron class
-// const myCar = new MyCar();
-// const myCar2 = new MyCar();
-// const myCar3 = new MyCar();
-
-// myCar2.color = "white";
-// myCar3.year = 2025;
-        
-function newObject() {
-const myCar = new MyCar();
-const myCar2 = new MyCar();
-const myCar3 = new MyCar();
-display(JSON.strigify(myCar));
-display(JSON.strigify(myCar2));
-display(JSON.strigify(myCar3));
-}
-
-
 //Callback function
 function myFunction(callbackFunction) {
     callbackFunction();
@@ -64,6 +32,35 @@ function asynchronous () {
     display("Waiting for the greeting...");
 }
 
+//Class v. object
+// function classVObject() {
+//     class MyCar {
+//         color = "red";
+//         year = 2024;
+//     }
+
+// const myCar {color = "red", year = 2024}
+// }
+
+// display(MyCar);
+// display(myCar);
+
+//Create object fron class
+class MyCar {
+    color="red";
+    year=2024;
+}
+
+function createObjectFromClass() {
+debugger;
+const myCar = new MyCar();
+const myCar2 = new MyCar();
+const myCar3 = new MyCar();
+display(JSON.stringify(myCar));
+display(JSON.stringify(myCar2));
+display(JSON.stringify(myCar3));
+}
+
 //Promise
 const results = new Promise(myFunction);
 const promise = new Promise(myFunction);
@@ -81,17 +78,17 @@ function delayedGreeting () {
 //Resolve function
 function resolveFunction(resolve) {
     setTimeout(serverResponse, 5000);
-    display("Inside my myFunction.");
+    display("Inside resolve function. ");
+    resolve(serverResponse);
 }
 
 function madePromise() {
     const promise = new Promise(resolveFunction);
-    display("Made a promise.")
+    display("Made a promise. ")
 }
 
-function serverResponse2() {
-   display("Your information has been processed successfully.");
-   resolve();
+function serverResponse() {
+   display("Your information has been processed successfully. ");
 }
 
 //Nested function 
@@ -107,18 +104,34 @@ function outerFunction () {
 //Nested resolve function
 function serverResolve(resolve) {
     setTimeout(nestedServerResponse, 5000);
-    display("Inside serverResolve.");
+    display("Inside 'serverResolve'. ");
                         
         function nestedServerResponse() {
-        display("Form was successfully processed.");
-            resolve("The promise is fulfilled.");
+        display("Form was successfully processed. ");
+            resolve("The promise is fulfilled. ");
         }
     }
 
 function serverResponsePromise() {
     const promise = new Promise(serverResolve);
      promise.then(getMessage);
-     display("Made a promise.");
+     display("Made a promise. ");
+}
+
+function getMessage(resolveValue) {
+    display(resolveValue);
+}
+
+//Less complex resolve function
+function serverResolve2(resolve) {
+    setTimeout(serverResponse, 5000);
+    display("Inside 'serverResolve'. ");
+    }
+
+function serverResponsePromise2() {
+    const promise = new Promise(serverResolve2);
+     promise.then(getMessage);
+     display("Made a promise. ");
 }
 
 function getMessage(resolveValue) {
@@ -165,7 +178,7 @@ function displayObject() {
 
 //Submit handler
 // function handleSubmit (event) {
-//     event. preventDefault;
+//     event.preventDefault;
 //     const inputs = event. target;
 //     const emailInput = inputs[0];
 //     const email = emailInput.value;
@@ -209,5 +222,4 @@ function displayObject() {
 
 // function getServerResponse(resolve) {
 //     setTimeout( , 5000);
-    
 // }

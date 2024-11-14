@@ -204,7 +204,7 @@
                 A JavaScript class is different than a JavaScript object.
                 The syntax of a class is different than an object.
 
-                <button onlick="classVObject()">Class v. Object</button>
+                <button onclick="classVObject()">Class v. Object</button>
             </pre>
 
             <pre>
@@ -222,9 +222,9 @@
                 const myCar = new MyCar();
                 const myCar2 = new MyCar();
                 const myCar3 = new MyCar();
-                display(JSON.strigify (myCar));
-                display(JSON.strigify (myCar2));
-                display(JSON.strigify (myCar3));
+                display(JSON.stringify (myCar));
+                display(JSON.stringify (myCar2));
+                display(JSON.stringify (myCar3));
                 }
                 </code>
                 Constructs an object from a class. Creates a predefined object.
@@ -239,7 +239,7 @@
                 3. Name of the class with parentheses and semi-colon.
                 4. The value is an ojbect created from the class. 
 
-                <button onclick="createObjectFromClass">New Object From Class</button>
+                <button onclick="createObjectFromClass()">New Object From Class</button>
             </pre>
 
             <pre>
@@ -288,18 +288,18 @@
                 <code>      
                     function resolveFunction(resolve) {
                         setTimeout(serverResponse, 5000);
-                        display("Inside my myFunction.");
+                        display("Inside resolve function. ");
+                        resolve(serverResponse);
                     }
                     
                     function madePromise() {
                         const promise = new Promise(resolveFunction);
-                        display("Made a promise.")
+                        display("Made a promise. ")
                     }
                     
                     function serverResponse() {
-                       display("Your information has been processed successfully.");
-                       resolve();
-                    }
+                       display("Your information has been processed successfully. ");
+                    }                  
                 </code>
                 <button onclick="madePromise()">Make a Promise</button>
 
@@ -403,23 +403,27 @@
                 <code>
                     function serverResolve(resolve) {
                         setTimeout(nestedServerResponse, 5000);
-                        display("Inside serverResolve.");
+                        display("Inside 'serverResolve'. ");
                                             
                             function nestedServerResponse() {
-                            display("Form was successfully processed.");
-                                resolve("The promise is fulfilled.");
+                            display("Form was successfully processed. ");
+                                resolve("The promise is fulfilled. ");
                             }
                         }
                     
                     function serverResponsePromise() {
                         const promise = new Promise(serverResolve);
                          promise.then(getMessage);
-                         display("Made a promise.");
+                         display("Made a promise. ");
                     }
                     
                     function getMessage(resolveValue) {
                         display(resolveValue);
                     }
+                </code>
+
+                <code>
+
                 </code>
                 To give serverResponse access to resolve, put serverResponse inside the outer function.    
                 Use an inner function to give access to the resolve function.
@@ -435,7 +439,8 @@
                 Promise should resolve after the server response.
                 No access to the promise after the server response.
                 </pre>
-                <button onclick="serverResponsePromise()">Get Server Response</button>
+                <button onclick="serverResponsePromise()">Get Server Response</button><br>
+                <button onclick="serverResponsePromise2()">Get Server Response</button>
             <pre>
                 Promise best practices
                 ----------------------
