@@ -1,0 +1,1 @@
+{"version":3,"sources":["api.scss","api.css"],"names":[],"mappings":"AAEA;EACI,uBAHQ;ACEZ","file":"api.css","sourcesContent":["$codeColor: rgb(24, 24, 183);\r\n\r\ncode {\r\n    color: $codeColor\r\n}","code {\n  color: rgb(24, 24, 183);\n}"]}

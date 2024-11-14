@@ -2,6 +2,9 @@
 <html>
     <head>
         <title></title>
+        <link rel="stylesheet" href="api.css">
+        <script src="utility-functions.js"></script>
+        <script src="api.js"></script>
     </head>
     <body>
         <header>
@@ -35,8 +38,79 @@
                 3. Chef: Processes the request by cooking the meal.
                 4. Waiter: Responds by delivering the meal.
             </pre>
+            <pre>
+                Trivia API
+                ----------------
+                <button onclick="handleClick(event)">Trivia</button>
+                <div id="outputTag"></div>
+            </pre>
+            <pre>
+                Fetch function
+                --------------
+                <code>
+                    const promise = fetch("https://opentdb.com/api.php?amount=1")
+                </code>
+                Sends a request to the URL of the REST API and returns a promise. 
+                Its resolve value is not a stringified object.
+                The resolve value is a special object created by the fetch function.
+                There's an extra step to access the response from the REST API.
+            </pre>
+            <pre>
+                Text method
+                -----------
+                <code>const promise = resolveValue.text();</code> //fetch object
+                Returns the stringified object from the fetch object and returns a promise. 
+            </pre>
+            <pre>
+                Then method
+                -----------
+                <code>promise.then(viewResponse);</code>
+                The then method needs to be used after the promise is returned to get the server response. 
+            </pre>
+            <pre>
+                Extracting the Trivia data
+                --------------------
+                <code>
+                    function viewTriviaResponse(resolveValue) {
+                        //THE RESOLVE VALUE WILL BE A STRINGIFIED OBJECT
+                        //THE PARSE METHOD GENERATES AN OBJECT FROM THE STRING
+                        const response = JSON. parse(resolveValue);
+                        const results = response.results;
+                        const item = results [0];
+                        const question = item.question;
+                        const answer = item. correct_answer;
+                        const incorrects = item.incorrect_answers;
+                </code>
+                1. Create sample HTML of a trivia question and its answers. 
+                2. Convert the HTML to a template string. 
+                3. Replace the values with variables. 
+                4. Output to an HTML element. 
+            </pre>
+            <pre>Specifying the Trivia data
+                 --------------------
+                 <code>
+                    https://opentdb.com/api.php?amount=10
+                 </code>   
+                 Specify <code>amount</code> to indicate how many questions to request.
+                 <code>
+                    https://opentdb.com/api.php?amount=10&category=CATEGORY_ID_HERE
+                 </code>  
+                 Specify a <code>category ID</code>to get questions from a specific category. 
+                 <code>
+                    https://opentdb.com/api.php?amount=10&difficulty=easy
+                 </code>  
+                 Specify a <code>difficulty</code>to get questions from a specific difficulty: easy, medium, or hard. 
+                 <code>
+                    https://opentdb.com/api.php?amount=10&type=multiple
+                 </code>  
+                 Specify a <code>type</code>to get questions from a specific type, multiple choice or true/false. 
+                 <code>
+                    https://opentdb.com/api_category.php
+                 </code>
+                 Use this URL to look up the categories and their ideas. 
 
-            
+
+            </pre>
         </main>
         <footer>
             

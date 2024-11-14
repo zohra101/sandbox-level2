@@ -328,7 +328,6 @@
                 ------------
                 Variables declared in the global scope are accessible throughout the page of code. Declare these variables outside the curly braces.
                 Any code in the same file has access to the variable. 
-                
                 <code>
                     const PI = 3.14;
                     const globalVariable ="I'm in the global scope."
@@ -347,7 +346,6 @@
                 Block scope
                 -----------
                 Variables declared in the block scope are accessible only within that block of code {the block is enclosed within the curly braces}.
-
                 <code>
                     while (false) {
                         const x = 5;
@@ -372,7 +370,7 @@
             </pre>
             <pre>
                 Function in a function (nested feunction)
-                ----------------
+                -----------------------------------------
                 <code>
                     function outerFunction () {
                         const message = "Hello world!";
@@ -400,35 +398,49 @@
                 </code>
             </pre>
             <pre>
-                Nested resolve function (promise)
-                ----------------------------------
+                Nested resolve function (promise) and resolve value
+                ---------------------------------------------------
                 <code>
                     function serverResolve(resolve) {
-                        setTimeout(nestedServerRespons, 5000);
-                        display("Inside my myFunction");
+                        setTimeout(nestedServerResponse, 5000);
+                        display("Inside serverResolve.");
                                             
                             function nestedServerResponse() {
                             display("Form was successfully processed.");
-                                resolve();
+                                resolve("The promise is fulfilled.");
                             }
                         }
+                    
+                    function serverResponsePromise() {
+                        const promise = new Promise(serverResolve);
+                         promise.then(getMessage);
+                         display("Made a promise.");
+                    }
+                    
+                    function getMessage(resolveValue) {
+                        display(resolveValue);
+                    }
                 </code>
-
                 To give serverResponse access to resolve, put serverResponse inside the outer function.    
-                AKA...Use an inner function to give access to the resolve function.
+                Use an inner function to give access to the resolve function.
+                The Promise sends a callback function to <code>myFunction</code>.
+                That callback function to <code>myFunction</code> indicates that the Promise is fulfilled.
+                That callback function is known as the <code>resolve</code> function.
+                A Promise is meant to be used by asynchronous code.
+                The asynchronous code is supposed <code>resolve</code>to indicate when it's done.
 
                 What do you observe about serverResponse as an inner function?
                 It has access to resolved.
                 Promise is pending before the server response.
                 Promise should resolve after the server response.
-                No access to the promise after the server response .
+                No access to the promise after the server response.
                 </pre>
-                <button onclick="serverResolve()">Get Server Response</button>
+                <button onclick="serverResponsePromise()">Get Server Response</button>
             <pre>
                 Promise best practices
                 ----------------------
                 <code>
-                    function handleSubmit (event) {
+                    function handleSubmit(event) {
                         event. preventDefault;
                         const inputs = event. target;
                         const emailInput = inputs[0];
@@ -438,7 +450,7 @@
                         promise. then (parseResponse);
                     }
                 </code>
-                A promise is usually the return function of a 
+                A promise is usually the return value of a function.
                 1. Communication with a server is called a request. Rename the promise function to request. 
                 2. Server communication is established with a URL. Add the url parameter to the function.
             </pre>

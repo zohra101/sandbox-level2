@@ -106,23 +106,23 @@ function outerFunction () {
 
 //Nested resolve function
 function serverResolve(resolve) {
-    setTimeout(nestedServerRespons, 5000);
-    display("Inside my myFunction");
+    setTimeout(nestedServerResponse, 5000);
+    display("Inside serverResolve.");
                         
         function nestedServerResponse() {
         display("Form was successfully processed.");
-            resolve();
+            resolve("The promise is fulfilled.");
         }
     }
 
-function getMessage(messageParameter) {
-    display(messageParameter);
-}
-
 function serverResponsePromise() {
     const promise = new Promise(serverResolve);
-    promise.then(getMessage);
-    display("Made a promise.");
+     promise.then(getMessage);
+     display("Made a promise.");
+}
+
+function getMessage(resolveValue) {
+    display(resolveValue);
 }
 
 //Form processing message
@@ -134,7 +134,7 @@ function submitForm(event) {
     setTimeout(serverResponse, 5000);
 }
 
-//
+//Stringify
 function displayObject() {
     const myCar = { color: "red", year: 2024 };
     const result = JSON.stringify(myCar);
@@ -153,59 +153,61 @@ function displayObject() {
 //     year = 2024;
 // }
 
-function newObject() {
-    const myCar = new MyCar();
-    const myCar2 = new MyCar();
-    const myCar3 = new MyCar();
-    display(JSON.strigify (myCar));
-    display(JSON.strigify (myCar2));
-    display(JSON.strigify (myCar3));
-}
+//New object from class
+// function newObject() {
+//     const myCar = new MyCar();
+//     const myCar2 = new MyCar();
+//     const myCar3 = new MyCar();
+//     display(JSON.strigify (myCar));
+//     display(JSON.strigify (myCar2));
+//     display(JSON.strigify (myCar3));
+// }
 
-function handleSubmit (event) {
-    event. preventDefault;
-    const inputs = event. target;
-    const emailInput = inputs[0];
-    const email = emailInput.value;
-    display ("Submitting form for " + email +"...");
-    const promise = new Promise (getServerResponse);
-    promise. then (parseResponse);
-}
+//Submit handler
+// function handleSubmit (event) {
+//     event. preventDefault;
+//     const inputs = event. target;
+//     const emailInput = inputs[0];
+//     const email = emailInput.value;
+//     display ("Submitting form for " + email +"...");
+//     const promise = new Promise (getServerResponse);
+//     promise. then (parseResponse);
+// }
 
-function getServerResponse(resolve) {
-    setTimeout(activateResolve, 5000)
+// function getServerResponse(resolve) {
+//     setTimeout(activateResolve, 5000)
     
-    function activateResolve () {
-        const response = {
-            message: "Successfully processed.",
-        };
-       const resolveValue = JSON.stringify(response);
-       resolve(resolveValue);
-    }
+//     function activateResolve () {
+//         const response = {
+//             message: "Successfully processed.",
+//         };
+//        const resolveValue = JSON.stringify(response);
+//        resolve(resolveValue);
+//     }
 
-}
+// }
 
-function parseResponse(resolveValue) {   
+// function parseResponse(resolveValue) {   
     
-}
+// }
 
-//
-function makeRequest(url) {
-    const promise = new Promise ();
+//Promise best practices 2024-11-12
+// function makeRequest(url) {
+//     const promise = new Promise ();
 
-}
+// }
 
-function handleSubmit (event) {
-    event. preventDefault();
-    const inputs = event. target;
-    const emailInput = inputs[0];
-    const email = emailInput.value;
-    display ("Submitting form for " + email +"...");
-    const promise = makeRequest("https://dummyurl.com");
-    promise.then(parseResponse);
-}
+// function handleSubmit (event) {
+//     event. preventDefault();
+//     const inputs = event. target;
+//     const emailInput = inputs[0];
+//     const email = emailInput.value;
+//     display ("Submitting form for " + email +"...");
+//     const promise = makeRequest("https://dummyurl.com");
+//     promise.then(parseResponse);
+// }
 
-function getServerResponse(resolve) {
-    setTimeout( , 5000);
+// function getServerResponse(resolve) {
+//     setTimeout( , 5000);
     
-}
+// }
