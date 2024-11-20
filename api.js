@@ -53,3 +53,21 @@ function viewResponse(resolveValue) {
                     </ol>`;
         output(trivia);
     }
+
+    function handleQuoteOfTheDay(){
+        const baseURL = "https://favqs.com/api";
+        const endPoint = "/qotd";
+        const URL = baseURL + endPoint;
+        const promise = fetch(URL);
+        promise.then(extractResponse);
+    }
+
+    function extractResponse(resolveValue){
+        const promise = resolveValue.text();
+        promise.then(parseQotdResponse);
+    }
+    
+    function parseQotdResponse(resolveValue){
+        const response = JSON.parse();
+    }
+    

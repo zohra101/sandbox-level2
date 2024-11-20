@@ -108,7 +108,90 @@
                     https://opentdb.com/api_category.php
                  </code>
                  Use this URL to look up the categories and their ideas. 
+            </pre>
+            <pre>
+                POSTMAN
+                ------- 
+                Application for trying out and testing REST APIs.
+                The icon at the bottom left closes the History panel.
+                <code><a href="https://www.postman.com/downloads/"></a></code>
+            </pre>
+            <pre>
+                Key value pairs
+                ----------------
+                They specify the data we want to request.
+                The key is on the left and the value on the right.
+                They are connected with = and separated by &.
+                A key value pair statement in a URL starts with a ?.
+            </pre>
+            <pre>
+                FavQs API
+                -----------
+                API for daily quotes
+                <code><a href="https://favqs.com/api/"></a></code>
+            </pre>
+            <pre>
+                Endpoint
+                --------
+                A path that is appended to the end of the base URL.
+                An endpoint contains data about specific respirces.
+                <code><a href="https://favqs.com/api/qotd"></a></code>
+                <code><a href="https://favqs.com/api/quotes"></a></code>
+            </pre>
+            <pre>
+                API key 
+                -------
+                A unique string or code that grants access to a REST API.
+                Some REST APIs require a key. 
+                
+                To use an API key from FavQs.com:   
+                1. Go to the Auth tab.
+                2. Change the type to Bearer Token. 
+                3. Paste the API key into the token box. 
+                <button onclick="handleQuoteOfTheDay()">Quote of the Day</button>
+            </pre>
+            <pre>
+                CORS 
+                -------
+                <img width="50%" src="CORS.png"><br>
+                Cross Origin Resource Sharing
+                Origin: The web addresses of the client and server.
+                Cross Origin: Different origins for client and server. 
+                Resource: Data such as files and stringified objects.
+                Resource sharing: Transmitting resources. 
 
+                The origin's policy for sharing resources.
+                Servers are supposed to tell browsers their CORS policy.
+                The CORS policy is a list of origins that are allowed to access the server. 
+                Browsers block the response if the origin is not on the list. 
+
+             
+                Some servers do not specificy their CORS policy.
+                Browsers automatically block responses from different origins. 
+                The quotes API doesn't specify a CORS policy.
+                Browsers automatically block responses from the quotes API. 
+
+                <img width="50%" src="CORS2.png"><br>
+                Postman is not a browser, so it can receive the response.
+                The browser can receive the response because the URL matches.
+                The VS Code terminal is not a browser, so it receives the response.
+                The browser enforces CORS.
+
+                <img width="50%" src="CORS3.png"><br>
+                The browser can accept responses from an API that has CORS.
+                The trivia API has CORS for all origins.
+            </pre>
+            <pre>
+                CORS Proxy Server
+                --------------------
+                <img width="50%" src="CORS4.jpg">
+                Allows the browser to receive responses from a server that does not specify CORS (cross origin resource sharing).
+
+
+            </pre>
+            <pre>
+                Free APIs
+                -----------
 
             </pre>
         </main>
